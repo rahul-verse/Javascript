@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linux Download | Download Linux Lite Free Linux Operating System</title>
+  <meta name="description" content="Linux Download, download Linux Lite a FREE operating system for everyone that is easy to use. A fast, secure and enjoyable operating system for your PC." />
+  <meta name="keywords" content="linux lite, linux, lightweight, lite, distro, operating system, free operating system, linux download, linux light, linux operating system, linux distros, ubuntu, ubuntu install, windows ubuntu, ubuntu linux, dvd ubuntu, ubuntu download, linux os, distro linux, linux cd live, linux dvd live, usb linux, media linux, linux cd, linux dvd, linux os download, linuxlite, linux operating system download, download linux operating system, linux free, free os" />
+  <meta name="author" content="Jerry Bezencon" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="icon" href="images/logo.jpg">
+
+  <style>
+    /* Absolute centering fix for download card headers (teaser + full page) */
+    .download-card .card-head { display: block !important; text-align: center !important; }
+    .download-card .card-head .badge { display: inline-block; margin-bottom: 6px; }
+    .download-card .card-head h3 { text-align: center !important; display: block; margin: 0 0 8px 0; }
+
+    /* Cards: readability + centering */
+    .download-card,
+    .download-card h3,
+    .download-card .meta li,
+    .download-card .meta i,
+    .download-card .badge { color: #222; }
+    .download-card .meta i { color: #666; }
+    .download-card { text-align: center; }
+    .download-card .meta { padding-left: 0; }
+    .download-card .meta li { list-style: none; display: block; }
+    .download-card .btn-group { justify-content: center; }
+    .download-card .checksum-block { justify-content: center; }
+
+    /* Quick Links 3-column layout */
+    .quick-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .quick-links-grid ul { list-style: none; padding: 0; margin: 0; }
+    .quick-links-grid li { margin-bottom: 6px; }
+    .quick-links-grid a { text-decoration: none; color: inherit; }
+    @media (max-width: 768px) { .quick-links-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .quick-links-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- 🔻 Mobile Hamburger Menu Styles (Left-side drawer) -->
+  <style>
+    :root { --nav-bg:#0f1115; --nav-text:#fff; --nav-border:#222; --accent:#e74c3c; }
+    header { position: sticky; top: 0; z-index: 1000; }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--nav-border);
+      background: #161a20;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .hamburger .bar {
+      position: relative;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      transition: transform .25s ease, background .25s ease;
+    }
+    .hamburger .bar::before,
+    .hamburger .bar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      transition: transform .25s ease, top .25s ease, opacity .2s ease;
+    }
+    .hamburger .bar::before { top: -7px; }
+    .hamburger .bar::after  { top: 7px; }
+    .hamburger[aria-expanded="true"] .bar { background: transparent; }
+    .hamburger[aria-expanded="true"] .bar::before { top: 0; transform: rotate(45deg); }
+    .hamburger[aria-expanded="true"] .bar::after  { top: 0; transform: rotate(-45deg); }
+
+    /* Mobile panel + backdrop */
+    .mobile-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+      z-index: 999;
+    }
+    .mobile-backdrop.open { opacity: 1; pointer-events: auto; }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0;
+      height: 100vh;
+      width: min(82vw, 340px);
+      background: var(--nav-bg);
+      color: var(--nav-text);
+      transform: translateX(-100%);
+      transition: transform .25s ease;
+      box-shadow: 10px 0 30px rgba(0,0,0,.35); /* shadow on right side */
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 16px;
+      border-right: 1px solid var(--nav-border);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    .mobile-menu .menu-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 4px 2px 10px 2px;
+      border-bottom: 1px solid var(--nav-border);
+      margin-bottom: 8px;
+    }
+    .mobile-menu .menu-head .brand {
+      display:flex; align-items:center; gap:10px; font-weight:700;
+    }
+    .mobile-menu .menu-head img { width: 26px; height: 26px; border-radius: 6px; }
+
+    .mobile-menu nav ul {
+      list-style: none; margin: 10px 0 0 0; padding: 0;
+      display: grid; gap: 2px;
+    }
+    .mobile-menu nav a {
+      display: block; padding: 14px 10px; border-radius: 10px;
+      color: #e7e7e7; text-decoration: none; font-weight: 600;
+      background: #141821; border: 1px solid var(--nav-border);
+    }
+    .mobile-menu nav a:hover,
+    .mobile-menu nav a:focus { outline: none; border-color: var(--accent); }
+
+    /* Hide desktop nav, show hamburger on mobile */
+    @media (max-width: 768px) {
+      .navbar { gap: 10px; }
+      .nav-links, .cta-buttons { display: none !important; }
+      .hamburger { display: inline-flex; }
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open { overflow: hidden; }
+  </style>
+
+  <!-- 🔧 Overrides: keep hamburger as three bars (no X), and style the Close button -->
+  <style>
+    /* Keep the three bars when expanded */
+    .hamburger[aria-expanded="true"] .bar { background: #fff; }
+    .hamburger[aria-expanded="true"] .bar::before { top: -7px; transform: none; }
+    .hamburger[aria-expanded="true"] .bar::after  { top: 7px;  transform: none; }
+
+    /* Close button inside the drawer */
+    .close-btn {
+      appearance: none;
+      border: 1px solid var(--nav-border);
+      background: #141821;
+      color: #e7e7e7;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus { border-color: var(--accent); outline: none; }
+  </style>
+
+  <!-- CTA styles identical to index.html -->
+  <style>
+    .cta-buttons {
+      display: flex;
+      gap: 10px;
+    }
+.cta-button.primary {
+  background-color: #3498db; /* Blue */
+  color: #fff;
+}
+
+.cta-button.secondary {
+  background-color: #000; /* Black */
+  color: #fff;
+}
+
+    .cta-button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70824860-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-70824860-1');
+  </script>
+
+</head>
+
+<script async src="https://fundingchoicesmessages.google.com/i/pub-1883744520022866?ers=1" nonce="1QbcINkBA4kS8Sa62LGbnQ"></script><script nonce="1QbcINkBA4kS8Sa62LGbnQ">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
+<body>
+
+  <!-- float_side right start -->
+  <div id="ad2">
+    <div id="adbox2" style="border: 1px solid #ccc; color: #000; top: 4%; right: 0%; width: 160px; height: 600px; z-index: 50000; position: fixed; display: block;">
+      <a onclick="document.getElementById('adbox2').style.display='none'" href="javascript:;" style="background-color:#999999; color:#000; font-family: Arial, Helvetica, sans-serif; font-size:10px; text-decoration: none; top: 0px;  right: 22px; float: right; position: absolute; z-index: 1000; margin: 1px -22px 0px 0px; padding : 1px 2px;">X Close Ad</a> 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1883744520022866" crossorigin="anonymous"></script> 
+      <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-1883744520022866" data-ad-slot="1509139518"></ins> 
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+    </div>
+  </div>
+  <!-- float_side right end -->
+
+  <!--Google Adsense Mobile Anchor/overlay ads--> 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1883744520022866",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <!-- ll_responsive_1 --> 
+  <ins class="adsbygoogle ll_responsive_1"
+    style="display:inline-block"
+    data-full-width-responsive="true"
+    data-ad-client="ca-pub-1883744520022866"
+    data-ad-slot="5985558433"></ins> 
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="images/logo.jpg" alt="Linux Lite Logo" class="logo-icon"><span>Linux Lite</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="download.php">Download</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="https://wiki.linuxliteos.com/en/home">Wiki</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+        </ul>
+        <div class="cta-buttons">
+          <a href="download.php" class="cta-button primary">Download Now</a>
+          <a href="donate.html" class="cta-button secondary">Donate</a>
+        </div>
+
+        <!-- 🔻 Hamburger button (shown on mobile) -->
+        <button class="hamburger" id="hamburger"
+                aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🔻 Backdrop + Mobile Drawer Menu (LEFT) -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="menu-head">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="" />
+        <span>Linux Lite</span>
+      </div>
+      
+      <!-- Replaced hamburger X with a simple Close button -->
+      <button class="close-btn" id="hamburgerClose" aria-label="Close menu">Close</button>
+    </div>
+    <nav>
+      <ul>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="download.php">Download</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="https://wiki.linuxliteos.com/en/home">Wiki</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Download Linux Lite</h1>
+      <p>Select from our latest and previous releases. Choose the download method that suits you best — ISO or Torrent. Checksums are available for verification.</p>
+    </div>
+  </section>
+
+  <!-- Available Versions -->
+  <section class="download" id="available-versions">
+    <div class="container download-content">
+      <h2>Available Versions</h2>
+      <p>Select a release and choose ISO or Torrent. Expand “Checksums” to verify your download.</p>
+
+      <div class="download-grid">
+        <!-- 7.6 -->
+        <article class="download-card">
+          <header class="card-head">
+            <span class="badge latest">Latest</span>
+            <h2><span>Linux Lite 7.6</span></h2>
+            <ul class="meta">
+              <li><i class="fas fa-calendar-alt"></i><a href="https://www.linuxliteos.com/forums/showthread.php?tid=9576" target="_blank" rel="noopener"> Release Announcement</a></li>
+              <li><i class="fas fa-calendar-alt"></i> Released: September 1, 2025</li>
+              <li><i class="fas fa-hdd"></i> Size: 2.9 GB</li>
+            </ul>
+          </header>
+          <div class="btn-group">
+            <a href="https://mirrors.linuxliteos.com/status/mirrors" target="_blank" class="btn btn-secondary"><i class="fas fa-download"></i> ISO</a>
+            <a href="https://sourceforge.net/projects/linux-lite/files/7.6/linux-lite-7.6-64bit.iso.torrent/download" target="_blank" class="btn btn-secondary"><i class="fas fa-magnet"></i> Torrent</a>
+          </div>
+          <details class="checksums">
+            <summary><i class="fas fa-shield-alt"></i> Checksums</summary>
+            <div class="checksum-block">
+              <strong>SHA256:</strong>
+              <code class="hash">97bde37b89a9a4d85675a09bbbde1977bac37abe57e73bbad19328c3073a2663</code>
+              <button class="copy-hash" data-hash="97bde37b89a9a4d85675a09bbbde1977bac37abe57e73bbad19328c3073a2663">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="checksum-block">
+              <strong>MD5:</strong>
+              <code class="hash">67f9f69eb7ee0b8a1c3fadd166bffeed</code>
+              <button class="copy-hash" data-hash="67f9f69eb7ee0b8a1c3fadd166bffeed">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+          </details>
+        </article>
+
+        <!-- 6.6 -->
+        <article class="download-card">
+          <header class="card-head">
+            <h2><span>Linux Lite 6.6</span></h2>
+            <ul class="meta">
+              <li><i class="fas fa-calendar-alt"></i><a href="https://www.linuxliteos.com/forums/showthread.php?tid=8914" target="_blank" rel="noopener"> Release Announcement</a></li>
+              <li><i class="fas fa-calendar-alt"></i> Released: September 4, 2023</li>
+              <li><i class="fas fa-hdd"></i> Size: 2.4 GB</li>
+            </ul>
+          </header>
+          <div class="btn-group">
+            <a href="https://mirrors.linuxliteos.com/status/mirrors" target="_blank" class="btn btn-secondary"><i class="fas fa-download"></i> ISO</a>
+            <a href="https://sourceforge.net/projects/linux-lite/files/6.6/linux-lite-6.6-64bit.iso.torrent/download" target="_blank" class="btn btn-secondary"><i class="fas fa-magnet"></i> Torrent</a>
+          </div>
+          <details class="checksums">
+            <summary><i class="fas fa-shield-alt"></i> Checksums</summary>
+            <div class="checksum-block">
+              <strong>SHA256:</strong>
+              <code class="hash">732b5561783c7203e3b919a4c55508a4256c13785b80e2e47019d817b89e9543</code>
+              <button class="copy-hash" data-hash="732b5561783c7203e3b919a4c55508a4256c13785b80e2e47019d817b89e9543">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="checksum-block">
+              <strong>MD5:</strong>
+              <code class="hash">857e1da4197bf8881882a72b27dbfded</code>
+              <button class="copy-hash" data-hash="857e1da4197bf8881882a72b27dbfded">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+          </details>
+        </article>
+
+        <!-- 5.8 -->
+        <article class="download-card">
+          <header class="card-head">
+            <h2><span>Linux Lite 5.8</span></h2>
+            <ul class="meta">
+              <li><i class="fas fa-calendar-alt"></i><a href="https://www.linuxliteos.com/forums/showthread.php?tid=8098" target="_blank" rel="noopener"> Release Announcement</a></li>
+              <li><i class="fas fa-calendar-alt"></i> Released: February 1, 2022</li>
+              <li><i class="fas fa-hdd"></i> Size: 1.4 GB</li>
+            </ul>
+          </header>
+          <div class="btn-group">
+            <a href="https://mirrors.linuxliteos.com/status/mirrors" target="_blank" class="btn btn-secondary"><i class="fas fa-download"></i> ISO</a>
+            <a href="https://sourceforge.net/projects/linux-lite/files/5.8/linux-lite-5.8-64bit.iso.torrent/download" target="_blank" class="btn btn-secondary"><i class="fas fa-magnet"></i> Torrent</a>
+          </div>
+          <details class="checksums">
+            <summary><i class="fas fa-shield-alt"></i> Checksums</summary>
+            <div class="checksum-block">
+              <strong>SHA256:</strong>
+              <code class="hash">8763eac7aa6a9b7887ab9abbbc40c469bca358a32bb35a1d46a756b5071d627b</code>
+              <button class="copy-hash" data-hash="8763eac7aa6a9b7887ab9abbbc40c469bca358a32bb35a1d46a756b5071d627b">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="checksum-block">
+              <strong>MD5:</strong>
+              <code class="hash">93a63d605fc99ea62f1d6e60fb4d3b44</code>
+              <button class="copy-hash" data-hash="93a63d605fc99ea62f1d6e60fb4d3b44">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Adsense Main Website Middle Page Ad Responsive -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1883744520022866" data-ad-slot="2774740031" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!-- Minimum Requirements -->
+  <section class="Explore" style="background:#fff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Minimum Requirements</h2>
+        <p>1.5 Ghz Dual Core Processor</p>
+        <p>4 GB Memory</p>
+        <p>40 GB HDD/SSD/NVME</p>
+        <p>VGA, DVI, DP or HDMI screen capable of 1366x768 resolution</p>
+        <p>DVD drive or USB port for the ISO image</p>
+        <p>Disable Secure Boot</p>
+
+        <!-- Release Information -->
+        <h2>Releases Information</h2>
+        <p>Release Announcements <a href="https://www.linuxliteos.com/forums/forumdisplay.php?fid=11" target="_blank" rel="noopener">here.</a></p><br>
+        <p>Standard package list and more details <a href="http://distrowatch.com/table.php?distribution=lite" target="_blank" rel="noopener">here.</a></p>
+        <p>Check out our hardware database <a href="hardware.php">here</a>.</p>
+        <p>How do I put Linux Lite on a DVD or USB? Click <a href="https://wiki.linuxliteos.com/en/install" target="_blank" rel="noopener">here</a>.</p>
+        <p>How do I download with BitTorrent? Click <a href="http://www.wikihow.com/Use-BitTorrent" target="_blank" rel="noopener">here.</a></p>
+        <p>Download BitTorrent for Windows or Mac <a href="http://www.utorrent.com/" target="_blank" rel="noopener">here.</a> Linux users <a href="http://dev.deluge-torrent.org/wiki/Download" target="_blank" rel="noopener">here.</a></p>
+
+        <!-- Community Sponsors -->
+        <h2>Community Sponsors</h2>
+        <p><a href="https://presale.codes/" target="_blank" rel="noopener"><img src="images/download/presale-codes.png" class="img-fluid img-center-max" alt="presale codes"></a></p>
+        <p>Presale.Codes has presale password information that helps fans, ticket brokers, ticket flippers, concierge desks, personal and virtual assistants and anyone who needs a presale code to find it and use it ASAP.</p>
+
+        <!-- Common Software -->
+        <h2>Common Software</h2>
+        <p><b>Kernel</b> - LTS<em>(custom kernels available versions 3.13+)</em></p>
+        <p><b>Web Browser</b> - Chrome</p>
+        <p><b>Email Client</b> - Thunderbird</p>
+        <p><b>Office Suite</b> - LibreOffice</p>
+        <p><b>Media Player</b> - VLC</p>
+        <p><b>Image Editor</b> - Gimp</p>
+        <p><b>System Backup and Restore</b> - Timeshift</p>
+        <p><b>File Manager</b> - Thunar</p>
+        <p><b>Ubuntu Base</b> - LTS</p>
+
+        <!-- Desktop UI -->
+        <h2>Desktop UI</h2>
+        <p><b>Desktop Environment:</b> XFCE</p>
+        <p><b>Window Theme:</b> Materia</p>
+        <p><b>Icon Theme:</b> Papirus</p>
+        <p><b>Font:</b> Roboto Regular</p>
+
+        <!-- How to install Linux Lite -->
+        <h2>Linux Lite Overview</h2>
+        <p><iframe title="CURRENT RELEASE" width="320" height="240" src="https://www.youtube.com/embed/mOKe1gmb9JI" frameborder="0" allowfullscreen=""></iframe></p>
+
+        <!-- Upgrading -->
+        <h2>Upgrading</h2>
+        <p>To upgrade from within a Series, click on <b>Menu, Favorites, Install Updates</b> (you must reboot if prompted to) then <b>Menu, Settings, Lite Upgrade</b>.</p>
+        <p>There is no upgrade path to or from <b>RC</b> releases.</p>
+        <p>There is no upgrade path from <b>Series</b> to <b>Series</b>.</p>
+
+        <!-- UEFI/Secure Boot Information -->
+        <h2>UEFI/Secure Boot</h2>
+        <p>In <b>Windows Search</b>, type <b>msinfo</b> or <b>msinfo32</b> and launch the desktop app named <b>System Information</b>. Look for the <b>BIOS Mode</b> item, and if the value for it is <b>UEFI</b>, 
+          then you have the <b>UEFI</b> firmware. If it says <b>BIOS Mode Legacy</b>, then that’s the firmware you’re running. Also, in general, UEFI-enabled machines have faster startup and 
+          shutdown times as compared to BIOS-Legacy machines. If you bought the computer/motherboard after 2010, chances are you have a UEFI system. If you are still unsure, download the UEFI version  as it will also detect and run on a BIOS-Legacy computer.</p>
+        <p><b>It is highly recommended that you turn off Secure Boot or you will have a far less enjoyable computing experience. To disable Secure Boot, see <a href="https://wiki.linuxliteos.com/en/homestart.html#secboot" target="_blank" rel="noopener">here</a>.</b></p>
+        <br>
+        <img src="images/download/windows-uefi.png" title="Windows UEFI" alt="windows uefi" class="img-fluid img-center-max">
+
+        <!-- Release Times -->
+        <h2>Release Times</h2>
+        <p>Linux Lite releases are announced and ready <b>12AM New Zealand Time</b> on the <b>1st</b> of that months release date.</p>
+        <p>Other time zones:</p>
+        <br>
+        <p><b>Australia, Perth</b> - 8PM (31st)</p>
+        <p><b>Brazil - Rio de Janeiro</b> - 9AM (31st)</p>
+        <p><b>Canada - Montreal</b> - 8AM (31st)</p>
+        <p><b>China - Beijing</b> - 7PM (31st)</p>
+        <p><b>Finland, Helsinki</b> - 1PM (31st)</p>
+        <p><b>France, Paris</b> - 2PM (31st)</p>
+        <p><b>India, Mumbai</b> - 5.30PM (31st)</p>
+        <p><b>Israel, Tel Aviv</b> - 3PM (31st)</p>
+        <p><b>Japan, Tokyo</b> - 9PM (31st)</p>
+        <p><b>Kuwait, Kuwait City</b> - 3PM (31st)</p>
+        <p><b>Australia, Sydney</b> - 10PM (31st)</p>
+        <p><b>Pakistan, Lahore</b> - 5PM (31st)</p>
+        <p><b>Russia, Moscow</b> - 3PM (31st)</p>
+        <p><b>South Africa, Cape Town</b> - 2PM (31st)</p>
+        <p><b>Spain, Madrid</b> - 2PM (31st)</p>
+        <p><b>United Kingdom, London</b> - 1PM (31st)</p>
+        <p><b>United Arab Emirates, Dubai</b> - 4PM (31st)</p>
+        <p><b>USA, New York</b> - 8AM (31st)</p>
+
+        <!-- Roadmap -->
+        <h2 id="roadmap">Roadmap</h2>
+        <p>The release schedule for Linux Lite.</p><br>
+        <b>Linux Lite 7.8 Release</b> - <em>1st February 2026 (End of Support June 2029)</em><br><br>
+        <b>Linux Lite 7.6 Release</b> - <em>1st September 2025</em><br><br>
+        <b>Linux Lite 7.4 Release</b> - <em>1st April 2025</em><br><br>
+        <b>Linux Lite 7.2 Release</b> - <em>1st November 2024</em><br><br>
+        <b>Linux Lite 7.0 Release</b> - <em>1st June 2024</em><br><br>
+        <b>Linux Lite 6.8 Release</b> - <em>No release required</em><br><br>
+        <b>Linux Lite 6.6 Release</b> - <em>4th September 2023 (End of Support June 2027)</em><br><br>
+        <b>Linux Lite 6.4 Release</b> - <em>1st April 2023</em><br><br>
+        <b>Linux Lite 6.2 Release</b> - <em>1st November 2022</em><br><br>
+        <b>Linux Lite 6.0 'Fluorite' Release</b> - <em>1st June 2022</em><br><br>
+        <b>Linux Lite 5.8 Release</b> - <em>1st February 2022 (End of Support April 2025)</em><br><br>
+        <b>Linux Lite 5.6 Release</b> - <em>1st September 2021</em><br><br>
+        <b>Linux Lite 5.4 Release</b> - <em>1st April 2021</em><br><br>
+        <b>Linux Lite 5.2 Release</b> - <em>1st November 2020</em><br><br>
+        <b>Linux Lite 5.0 Release</b> - <em>1st June 2020</em><br><br>
+        <b>Linux Lite 4.8 Release</b> - <em>14th January 2020 (End of Support April 2023)</em><br><br>
+        <b>Linux Lite 4.6 Release</b> - <em>1st September 2019</em><br><br>
+        <b>Linux Lite 4.4 Release</b> - <em>1st April 2019</em><br><br>
+        <b>Linux Lite 4.2 Release</b> - <em>1st November 2018</em><br><br>
+        <b>Linux Lite 4.0 'Diamond' Release</b> - <em>1st June 2018</em><br><br>
+        <b>Linux Lite 3.8 Release</b> - <em>1st February 2018 (End of Support April 2021)</em><br><br>
+        <b>Linux Lite 3.6 Release</b> - <em>1st September 2017</em><br><br>
+        <b>Linux Lite 3.4 Release</b> - <em>1st April 2017</em><br><br>
+        <b>Linux Lite 3.2 Release</b> - <em>1st November 2016</em><br><br>
+        <b>Linux Lite 3.0 'Citrine' Release</b> - <em>1st June 2016</em><br><br>
+        <b>Linux Lite 2.8 Release</b> - <em>1st December, 2014 (End of Support April 2019)</em><br><br>
+        <b>Linux Lite 2.6 Release</b> - <em>1st April, 2015</em><br><br>
+        <b>Linux Lite 2.4 Release</b> - <em>1st September, 2015</em><br><br>
+        <b>Linux Lite 2.2 Release</b> - <em>1st December, 2014</em><br><br>
+        <b>Linux Lite 2.0 'Beryl' Release</b> - <em>1st June, 2014</em>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Adsense Main Website Middle Page Ad Responsive -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1883744520022866" data-ad-slot="2774740031" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!--Google Adsense Main Responsive Header/Footer-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <!-- ll_responsive_1 --> 
+  <ins class="adsbygoogle ll_responsive_1"
+    style="display:inline-block"
+    data-full-width-responsive="true"
+    data-ad-client="ca-pub-1883744520022866"
+    data-ad-slot="5985558433"></ins> 
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Linux Lite</h3>
+          <p>Your gateway to a simpler, more secure computing experience. Lightweight, fast, and user-friendly.</p>
+          <div class="social-links">
+            <a href="https://gitlab.com/users/linuxlite/projects" target="_blank"><i class="fab fa-gitlab"></i></a>
+            <a href="https://x.com/linuxlite" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://discord.gg/bQSFaFAUkm" target="_blank"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (3 x 5) -->
+        <div class="footer-column quick-links">
+          <h3>Quick Links</h3>
+          <div class="quick-links-grid">
+            <ul>
+              <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="explore.html"><i class="fas fa-chevron-right"></i> Explore</a></li>              
+              <li><a href="download.php"><i class="fas fa-chevron-right"></i> Download</a></li>
+              <li><a href="https://mirrors.linuxliteos.com/status/mirrors"><i class="fas fa-chevron-right"></i> Mirrors</a></li>
+              <li><a href="donate.html"><i class="fas fa-chevron-right"></i> Donate</a></li>
+            </ul>
+            <ul>
+              <li><a href="feedback.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+              <li><a href="contribute.html"><i class="fas fa-chevron-right"></i> Contribute</a></li>
+              <li><a href="hardware.php"><i class="fas fa-chevron-right"></i> Hardware Database</a></li>
+              <li><a href="https://www.linuxliteos.com/gallery/"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+              <li><a href="artwork.html"><i class="fas fa-chevron-right"></i> Artwork</a></li>
+            </ul>
+            <ul>
+              <li><a href="support.html"><i class="fas fa-chevron-right"></i> Support</a></li>				
+              <li><a href="https://www.linuxliteos.com/forums/"><i class="fas fa-chevron-right"></i> Forum</a></li>
+              <li><a href="https://wiki.linuxliteos.com/en/home"><i class="fas fa-chevron-right"></i> Wiki</a></li>              
+              <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+              <li><a href="https://status.linuxliteos.com/status/services"><i class="fas fa-chevron-right"></i> Status Page</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; Linux Lite 2012 - <span id="year"></span>. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> for the Linux Community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Copy checksum handler
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-hash');
+      if (!btn) return;
+      const hash = btn.dataset.hash || '';
+      try {
+        await navigator.clipboard.writeText(hash);
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied';
+        setTimeout(() => (btn.innerHTML = original), 1500);
+      } catch {
+        alert('Copy failed. Please copy manually.');
+      }
+    });
+
+    // Equalize card heights
+    function equalizeDownloadCards() {
+      const cards = Array.from(document.querySelectorAll('.download-card'));
+      if (!cards.length) return;
+      cards.forEach(c => c.style.height = 'auto');
+      const max = Math.max(...cards.map(c => c.offsetHeight));
+      cards.forEach(c => c.style.height = max + 'px');
+    }
+    document.addEventListener('DOMContentLoaded', equalizeDownloadCards);
+    window.addEventListener('load', equalizeDownloadCards);
+    window.addEventListener('resize', () => {
+      clearTimeout(window.__dl_eq_to);
+      window.__dl_eq_to = setTimeout(equalizeDownloadCards, 120);
+    });
+    document.addEventListener('toggle', (e) => {
+      if (e.target.matches('.checksums')) equalizeDownloadCards();
+    }, true);
+  </script>
+
+  <!-- 🔻 Hamburger Menu JS (left-side) -->
+  <script>
+    (function() {
+      const body = document.body;
+      const openBtn = document.getElementById('hamburger');
+      const closeBtn = document.getElementById('hamburgerClose');
+      const menu = document.getElementById('mobileMenu');
+      const backdrop = document.getElementById('mobileBackdrop');
+
+      function openMenu() {
+        menu.classList.add('open');
+        backdrop.classList.add('open');
+        body.classList.add('menu-open');
+        openBtn.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+      }
+      function closeMenu() {
+        menu.classList.remove('open');
+        backdrop.classList.remove('open');
+        body.classList.remove('menu-open');
+        openBtn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+      // Close on ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+      });
+
+      // Close after selecting a link
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    })();
+  </script>
+</body>
+</html>
